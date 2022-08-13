@@ -24,18 +24,13 @@ class AnoModeloViewModel {
         self.model = anoModelosModel
     }
     
-    func getAnoModelos() {
+    func  getAnoModelos() {
          model.getAnoModelos { [weak self] data, error in
             let responseData = try? JSONDecoder().decode(AnoModelo.self, from: data!)
-            //self?.anoModelos = responseData!
-        
-            for anoModeloElement in responseData! {
-                print(anoModeloElement.nome)
-                self?.anoModelos.append(anoModeloElement)
-            }
+            self?.anoModelos = responseData!
         }
-        print("b")
-       
+        
+        while(self.anoModelos.isEmpty){}
     }
     
     // func getDetails(anoModeloId: String) -> Void {
