@@ -20,7 +20,7 @@ class FipeController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = AnoModeloViewModel(anoModelosModel: AnoModeloModel())
+        viewModel = AnoModeloViewModel(listaModeloApi: ListaModeloAnoApi())
 
         //viewModel.delegate = self
         tableView.delegate = self

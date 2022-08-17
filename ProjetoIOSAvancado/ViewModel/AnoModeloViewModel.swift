@@ -7,35 +7,23 @@
 
 import Foundation
 
-protocol AnoModeloViewModelDelegate: AnyObject {
-    func getDetails(anoModeloId: AnoModelo)
-}
-
 class AnoModeloViewModel {
-    private let model: AnoModeloModel
-    
-    weak var delegate: AnoModeloViewModelDelegate?
-    
+    private let api: ListaModeloAnoApi
+        
     var anoModelos: [AnoModeloElement] = []
     //var anoModeloElement: AnoModeloElement = AnoModeloElement(nome: "b", codigo: "b")
 
-        
-    init(anoModelosModel: AnoModeloModel) {
-        self.model = anoModelosModel
+    init(listaModeloApi: ListaModeloAnoApi) {
+        self.api = listaModeloApi
     }
     
-    func  getAnoModelos() {
-         model.getAnoModelos { [weak self] data, error in
-            let responseData = try? JSONDecoder().decode(AnoModelo.self, from: data!)
-            self?.anoModelos = responseData!
-        }
-        
-        while(self.anoModelos.isEmpty){}
+    func getAnoModelos() {
+            api.getAnoModelos {[weak self] data, error in
+                let responseData = try? JSONDecoder().decode([AnoModeloElement].self, from: data!)
+                self?.anoModelos = responseData!
+            }
+       while(self.anoModelos.isEmpty){}
     }
-    
-    // func getDetails(anoModeloId: String) -> Void {
-        // getDetailsMovie()
-    // }
 }
 
 /*
