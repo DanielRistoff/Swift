@@ -8,7 +8,17 @@
 import Foundation
 import UIKit
 
-class FipeController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+protocol FipeControllerDelegate{
+    func update()
+}
+
+class FipeController: UIViewController, UITableViewDataSource, UITableViewDelegate, FipeControllerDelegate {
+    func update() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     private var viewModel: AnoModeloViewModel!
 
@@ -20,11 +30,16 @@ class FipeController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = AnoModeloViewModel(listaModeloApi: ListaModeloAnoApi())
-
+        viewModel = AnoModeloViewModel(listaModeloApi: ListaModeloAnoApi(), viewDelegate: self)
+       
         //viewModel.delegate = self
         tableView.delegate = self
+        //tableView.dataSource = self
+        
+        //DispatchQueue.main.async {
         tableView.dataSource = self
+        //    self.tableView.reloadData()
+        //}
         
         viewModel.getAnoModelos()
     }

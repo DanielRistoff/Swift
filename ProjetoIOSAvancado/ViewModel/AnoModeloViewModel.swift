@@ -9,20 +9,23 @@ import Foundation
 
 class AnoModeloViewModel {
     private let api: ListaModeloAnoApi
-        
+    private let viewDelegate: FipeControllerDelegate
+    
     var anoModelos: [AnoModeloElement] = []
     //var anoModeloElement: AnoModeloElement = AnoModeloElement(nome: "b", codigo: "b")
 
-    init(listaModeloApi: ListaModeloAnoApi) {
+    init(listaModeloApi: ListaModeloAnoApi, viewDelegate: FipeControllerDelegate) {
         self.api = listaModeloApi
+        self.viewDelegate = viewDelegate
     }
     
     func getAnoModelos() {
             api.getAnoModelos {[weak self] data, error in
                 let responseData = try? JSONDecoder().decode([AnoModeloElement].self, from: data!)
                 self?.anoModelos = responseData!
+                self?.viewDelegate.update()
             }
-       while(self.anoModelos.isEmpty){}
+       //while(self.anoModelos.isEmpty){}
     }
 }
 

@@ -7,14 +7,9 @@
 
 import Foundation
 
-protocol FipesViewModelDelegate: AnyObject {
-    func getDetails(fipeId: Fipe)
-}
-
 class FipesViewModel {
     private let model: FipeModel
     
-    weak var delegate: FipesViewModelDelegate?
     var fipe: Fipe?
     
     init(fipe: FipeModel) {
