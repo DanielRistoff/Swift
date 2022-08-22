@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		043680D828A7EB7C00D58450 /* Fipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043680D728A7EB7C00D58450 /* Fipe.swift */; };
-		043680DA28A7EBA400D58450 /* FipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043680D928A7EBA400D58450 /* FipeModel.swift */; };
+		043680DA28A7EBA400D58450 /* ObterFipeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043680D928A7EBA400D58450 /* ObterFipeApi.swift */; };
 		043680DE28A7EBE000D58450 /* FipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043680DD28A7EBE000D58450 /* FipeController.swift */; };
 		043680E028A7EC3300D58450 /* FipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043680DF28A7EC3300D58450 /* FipeViewModel.swift */; };
 		043680E228A80E1500D58450 /* AnoModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043680E128A80E1500D58450 /* AnoModelo.swift */; };
@@ -44,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		043680D728A7EB7C00D58450 /* Fipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Fipe.swift; path = Fipes/Fipe.swift; sourceTree = "<group>"; };
-		043680D928A7EBA400D58450 /* FipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FipeModel.swift; sourceTree = "<group>"; };
+		043680D928A7EBA400D58450 /* ObterFipeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObterFipeApi.swift; sourceTree = "<group>"; };
 		043680DD28A7EBE000D58450 /* FipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FipeController.swift; sourceTree = "<group>"; };
 		043680DF28A7EC3300D58450 /* FipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FipeViewModel.swift; sourceTree = "<group>"; };
 		043680E128A80E1500D58450 /* AnoModelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnoModelo.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				0451CE0D28AC738B007B2269 /* ListaModeloAnoApi.swift */,
-				043680D928A7EBA400D58450 /* FipeModel.swift */,
+				043680D928A7EBA400D58450 /* ObterFipeApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -312,7 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				043680E228A80E1500D58450 /* AnoModelo.swift in Sources */,
-				043680DA28A7EBA400D58450 /* FipeModel.swift in Sources */,
+				043680DA28A7EBA400D58450 /* ObterFipeApi.swift in Sources */,
 				04E6309928A1D236001D1879 /* ViewController.swift in Sources */,
 				043680D828A7EB7C00D58450 /* Fipe.swift in Sources */,
 				0451CE0E28AC738B007B2269 /* ListaModeloAnoApi.swift in Sources */,

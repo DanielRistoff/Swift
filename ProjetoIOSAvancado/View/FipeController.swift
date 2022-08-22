@@ -32,15 +32,8 @@ class FipeController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         viewModel = AnoModeloViewModel(listaModeloApi: ListaModeloAnoApi(), viewDelegate: self)
        
-        //viewModel.delegate = self
         tableView.delegate = self
-        //tableView.dataSource = self
-        
-        //DispatchQueue.main.async {
         tableView.dataSource = self
-        //    self.tableView.reloadData()
-        //}
-        
         viewModel.getAnoModelos()
     }
     
@@ -68,8 +61,6 @@ class FipeController: UIViewController, UITableViewDataSource, UITableViewDelega
         // TODO implement
 //    }
 //}
-
-
 
 /*
 
