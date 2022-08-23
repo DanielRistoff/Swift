@@ -7,24 +7,21 @@
 
 import Foundation
 
-class FipesViewModel {
-    private let model: FipeModel
+class FipeViewModel {
+    private let api: ObterFipeApi
     
     var fipe: Fipe?
     
-    init(fipe: FipeModel) {
-        self.model = fipe
+    init(obterFipeApi: ObterFipeApi) {
+        self.api = obterFipeApi
     }
     
-    func getMovies() {
-        model.getFipe { [weak self] data, error in
+    func obterFipePorAno(ano: String) {
+        api.getFipePorAno { [weak self] data, error in
             let responseData = try? JSONDecoder().decode(Fipe.self, from: data!)
             self?.fipe = responseData!
+           
         }
-    }
-    
-    func getDetails(fipeId: String) -> Void {
-        // getDetailsMovie()
     }
 }
 

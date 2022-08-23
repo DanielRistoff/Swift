@@ -12,7 +12,6 @@ class AnoModeloViewModel {
     private let viewDelegate: FipeControllerDelegate
     
     var anoModelos: [AnoModeloElement] = []
-    //var anoModeloElement: AnoModeloElement = AnoModeloElement(nome: "b", codigo: "b")
 
     init(listaModeloApi: ListaModeloAnoApi, viewDelegate: FipeControllerDelegate) {
         self.api = listaModeloApi
@@ -25,7 +24,6 @@ class AnoModeloViewModel {
                 self?.anoModelos = responseData!
                 self?.viewDelegate.update()
             }
-       //while(self.anoModelos.isEmpty){}
     }
 }
 

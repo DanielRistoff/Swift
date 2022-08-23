@@ -10,9 +10,16 @@ import UIKit
 
 protocol FipeControllerDelegate{
     func update()
+    func updateFipeSelecionado()
 }
 
 class FipeController: UIViewController, UITableViewDataSource, UITableViewDelegate, FipeControllerDelegate {
+    func updateFipeSelecionado() {
+        DispatchQueue.main.async {
+            
+        }
+    }
+    
     func update() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -21,9 +28,14 @@ class FipeController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     private var viewModel: AnoModeloViewModel!
+    private var fipeViewModel: FipeViewModel!
 
     var data: [AnoModeloElement] {
         return viewModel.anoModelos
+    }
+    
+    var fipe: Fipe? {
+        return fipeViewModel.fipe
     }
     
     // MARK: - Initialize
@@ -31,7 +43,8 @@ class FipeController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         viewModel = AnoModeloViewModel(listaModeloApi: ListaModeloAnoApi(), viewDelegate: self)
-       
+        fipeViewModel = FipeViewModel(obterFipeApi: ObterFipeApi())
+        
         tableView.delegate = self
         tableView.dataSource = self
         viewModel.getAnoModelos()
@@ -51,6 +64,12 @@ class FipeController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var fipe = fipeViewModel.obterFipePorAno(ano: "")
+        print(fipeViewModel.fipe)
+        //print( self.data[indexPath.row].codigo)
     }
 }
 
