@@ -9,18 +9,20 @@ import Foundation
 
 class FipeViewModel {
     private let api: ObterFipeApi
+    private let viewDelegate: FipeControllerDelegate
     
     var fipe: Fipe?
     
-    init(obterFipeApi: ObterFipeApi) {
+    init(obterFipeApi: ObterFipeApi, viewDelegate: FipeControllerDelegate) {
         self.api = obterFipeApi
+        self.viewDelegate = viewDelegate
     }
     
     func obterFipePorAno(ano: String) {
         api.getFipePorAno { [weak self] data, error in
             let responseData = try? JSONDecoder().decode(Fipe.self, from: data!)
             self?.fipe = responseData!
-           
+            self?.viewDelegate.updateFipeSelecionado()
         }
     }
 }

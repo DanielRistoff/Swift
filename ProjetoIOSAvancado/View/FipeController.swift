@@ -16,6 +16,10 @@ protocol FipeControllerDelegate{
 class FipeController: UIViewController, UITableViewDataSource, UITableViewDelegate, FipeControllerDelegate {
     func updateFipeSelecionado() {
         DispatchQueue.main.async {
+            print(self.fipeViewModel.fipe)
+            if(self.fipeViewModel.fipe != nil){
+                self.present(VisualizarFipeViewController(fipe: self.fipeViewModel.fipe!), animated: true)
+            }
             
         }
     }
@@ -43,7 +47,7 @@ class FipeController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         viewModel = AnoModeloViewModel(listaModeloApi: ListaModeloAnoApi(), viewDelegate: self)
-        fipeViewModel = FipeViewModel(obterFipeApi: ObterFipeApi())
+        fipeViewModel = FipeViewModel(obterFipeApi: ObterFipeApi(), viewDelegate: self)
         
         tableView.delegate = self
         tableView.dataSource = self

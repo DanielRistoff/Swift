@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042F52B428B6D9850072D226 /* VisualizarFipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F52B328B6D9850072D226 /* VisualizarFipeViewController.swift */; };
 		043680D828A7EB7C00D58450 /* Fipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043680D728A7EB7C00D58450 /* Fipe.swift */; };
 		043680DA28A7EBA400D58450 /* ObterFipeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043680D928A7EBA400D58450 /* ObterFipeApi.swift */; };
 		043680DE28A7EBE000D58450 /* FipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043680DD28A7EBE000D58450 /* FipeController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042F52B328B6D9850072D226 /* VisualizarFipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizarFipeViewController.swift; sourceTree = "<group>"; };
 		043680D728A7EB7C00D58450 /* Fipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Fipe.swift; path = Fipes/Fipe.swift; sourceTree = "<group>"; };
 		043680D928A7EBA400D58450 /* ObterFipeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObterFipeApi.swift; sourceTree = "<group>"; };
 		043680DD28A7EBE000D58450 /* FipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FipeController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				043680DD28A7EBE000D58450 /* FipeController.swift */,
+				042F52B328B6D9850072D226 /* VisualizarFipeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				0451CE0E28AC738B007B2269 /* ListaModeloAnoApi.swift in Sources */,
 				04E6309528A1D236001D1879 /* AppDelegate.swift in Sources */,
 				04E6309728A1D236001D1879 /* SceneDelegate.swift in Sources */,
+				042F52B428B6D9850072D226 /* VisualizarFipeViewController.swift in Sources */,
 				043680E628A8162300D58450 /* AnoModeloViewModel.swift in Sources */,
 				043680E028A7EC3300D58450 /* FipeViewModel.swift in Sources */,
 				043680DE28A7EBE000D58450 /* FipeController.swift in Sources */,
