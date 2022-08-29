@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040FC84B28BC31AE00C3C928 /* AnoModeloViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FC84A28BC31AE00C3C928 /* AnoModeloViewModelTest.swift */; };
+		040FC84D28BC32C800C3C928 /* ListaModeloAnoApiMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040FC84C28BC32C800C3C928 /* ListaModeloAnoApiMock.swift */; };
 		042F52B428B6D9850072D226 /* VisualizarFipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F52B328B6D9850072D226 /* VisualizarFipeViewController.swift */; };
 		043680D828A7EB7C00D58450 /* Fipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043680D728A7EB7C00D58450 /* Fipe.swift */; };
 		043680DA28A7EBA400D58450 /* ObterFipeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043680D928A7EBA400D58450 /* ObterFipeApi.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040FC84A28BC31AE00C3C928 /* AnoModeloViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnoModeloViewModelTest.swift; sourceTree = "<group>"; };
+		040FC84C28BC32C800C3C928 /* ListaModeloAnoApiMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaModeloAnoApiMock.swift; sourceTree = "<group>"; };
 		042F52B328B6D9850072D226 /* VisualizarFipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizarFipeViewController.swift; sourceTree = "<group>"; };
 		043680D728A7EB7C00D58450 /* Fipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Fipe.swift; path = Fipes/Fipe.swift; sourceTree = "<group>"; };
 		043680D928A7EBA400D58450 /* ObterFipeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObterFipeApi.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040FC84928BC312D00C3C928 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				040FC84A28BC31AE00C3C928 /* AnoModeloViewModelTest.swift */,
+				040FC84C28BC32C800C3C928 /* ListaModeloAnoApiMock.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0443FA4228A5CD950098CC8E /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 		04E630AA28A1D23B001D1879 /* ProjetoIOSAvancadoTests */ = {
 			isa = PBXGroup;
 			children = (
+				040FC84928BC312D00C3C928 /* ViewModel */,
 				04E630AB28A1D23B001D1879 /* ProjetoIOSAvancadoTests.swift */,
 			);
 			path = ProjetoIOSAvancadoTests;
@@ -332,7 +346,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040FC84D28BC32C800C3C928 /* ListaModeloAnoApiMock.swift in Sources */,
 				04E630AC28A1D23B001D1879 /* ProjetoIOSAvancadoTests.swift in Sources */,
+				040FC84B28BC31AE00C3C928 /* AnoModeloViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
